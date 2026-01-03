@@ -14,3 +14,16 @@ download a file. Type "cloudshell aliases" to see these commands.
 
 Type "help" to see this message any time. Type "builtin help" to see Bash interpreter help.
 
+Create .env file with below details
+GOOGLE_GENAI_USE_VERTEXAI=TRUE
+GOOGLE_CLOUD_PROJECT=xxx
+GOOGLE_CLOUD_LOCATION=global
+MODEL=gemini-2.5-flash
+
+Copy .env file into 2 folders - payments_and_subagents, workflow_agents 
+
+Then, run below steps 
+gcloud init
+gcloud auth application-default login
+adk run parents_and_subagents
+adk run workflow_agents
